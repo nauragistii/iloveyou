@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Our Love Story</title>
+    <!-- Add favicon links here -->
+    <link rel="icon" type="image/png" href="images/tonseok2.jpg">
+    <!-- Existing style links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">First Mensive</div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Update the navigation links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#countdown">Countdown</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#journey">Our Journey</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#messages">Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Add this right after the header -->
+    <div class="music-player">
+        <button id="musicToggle" class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+        <div class="song-info">
+            <p>"You'll Be in My Heart" — NIKI</p>
+        </div>
+        <audio id="bgMusic" loop>
+            <source src="images/ourSong.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Replace the existing hero section with this new design -->
+    <section id="home" class="hero">
+        <div class="floating-hearts"></div>
+        <div class="hero-container">
+            <div class="hero-image">
+                <div class="image-frame">
+                    <img src="images/tonseok1.jpg" alt="Our Love Story">
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Our First Mensive</h1>
+                <p>Every moment with you feels like a page from a fairy tale. Together, we've created a story worth
+                    telling - filled with laughter, tears, and countless memories that make life extraordinary.</p>
+                <a href="#photos" class="hero-button">Explore Our Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Improved responsive countdown section -->
+    <section id="countdown" class="countdown-section">
+        <h2>Counting Down to Our Next Special Day</h2>
+        <div class="countdown-container">
+            <div class="countdown-box">
+                <div id="days" class="countdown-value">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+                <div id="hours" class="countdown-value">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+                <div id="minutes" class="countdown-value">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+                <div id="seconds" class="countdown-value">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+        <p class="countdown-message">Until our 2nd mensiversary!</p>
+    </section>
+
+    <section id="photos" class="photos-section">
+        <h2>Our Memories</h2>
+        <div class="photo-gallery">
+            <div class="photo">
+                <img src="images/memo1.jpg" alt="Love Memory">
+                <div class="photo-overlay">
+                    <p>Our First Valentine</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/memo2.jpg" alt="Love Memory">
+                <div class="photo-overlay">
+                    <p>First Icons</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/memo3.jpg" alt="Love Memory">
+                <div class="photo-overlay">
+                    <p>Official Relationship</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/memo4.jpg" alt="Love Memory">
+                <div class="photo-overlay">
+                    <p>Dudut our son</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/memo5.jpg" alt="Love Memory">
+                <div class="photo-overlay">
+                    <p>Movie Date</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/memo6.jpg" alt="Love Memory">
+                <div class="photo-overlay">
+                    <p>Your beautiful writing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey-section">
+        <h2>Our Journey Together</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>First Meeting</h3>
+                    <p class="date">December 23, 2024</p>
+                    <p>The day we first met and everything changed.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>First Chat</h3>
+                    <p class="date">January 3, 2025</p>
+                    <p>Who would have thought, tea was our beginning.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>First Move</h3>
+                    <p class="date">February 11, 2020</p>
+                    <p>Feelings are always unpredictable.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Official Relationship</h3>
+                    <p class="date">May 5, 2025</p>
+                    <p>A relationship I never imagined would come true.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>First Movie-Date</h3>
+                    <p class="date">May 10, 2025</p>
+                    <p>A plan we had been making for a long time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quotes" class="quotes-section">
+        <h2>Words From The Heart</h2>
+        <div class="quotes-container">
+            <div class="quote-card">
+                <div class="quote-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I think I wished for you all my life. If past life is real, I believe that we were lovers there, where death was the only thing that could separate us. If parallel universe exist, I am certain that we were intertwined souls searching for one another in corner of the world. In this lifetime too, I sent my hopes to the stars, hoping that we are destined to be together forever. Then you appeared, and it felt like all my whispered wishes had finally founf their back home.</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="quote-author">- For you are my eternal love</div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>i will forever show you the love, care and attention that you truly deserve, no matter how hard things get or what life throws at us, we are in this together, every step of the way</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="quote-author">- From My Heart</div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I love you in every season, through all the changes in your soul. I love you every month and I would love you on February 30th without hesitation. My love for you reaches time that don't exist</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="quote-author">- With Love</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this before the messages section -->
+    <section id="quiz" class="quiz-section">
+        <h2>How Well Do You Know Us?</h2>
+        <div class="quiz-container">
+            <div id="quizContent">
+                <p class="quiz-intro">Test your knowledge about our relationship with this fun quiz!</p>
+                <button id="startQuiz" class="quiz-button">Start Quiz</button>
+            </div>
+            <div id="quizResults" class="quiz-results hidden">
+                <h3>Your Score: <span id="score">0</span>/5</h3>
+                <p id="resultMessage"></p>
+                <button id="retryQuiz" class="quiz-button">Try Again</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="messages" class="messages-section">
+        <h2>Sweet Messages</h2>
+        <div class="messages-container">
+            <div class="messages-display">
+                <!-- Messages will be displayed here via JavaScript -->
+            </div>
+            <div class="message-form">
+                <h3>Leave Your Message</h3>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this before the footer -->
+    <!-- <section id="future" class="future-section">
+        <h2>Our Future Together</h2>
+        <div class="dreams-container">
+            <div class="dream-card">
+                <div class="dream-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Living Together</h3>
+                <p>A cozy place where we can build our life together, with a garden full of flowers and a kitchen where we'll cook our favorite meals.</p>
+            </div>
+            
+            <div class="dream-card">
+                <div class="dream-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Japan!</h3>
+                <p>From beaches with crystal clear waters to mountains with breathtaking views, we'll discover the world hand in hand.</p>
+            </div>
+            
+            <div class="dream-card">
+                <div class="dream-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Growing Together</h3>
+                <p>Supporting each other's dreams, celebrating achievements, and facing challenges as a team.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <p>&copy; 2025 Our Love Story | Made with <i class="fas fa-heart"></i> by Lucaith Huds.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
