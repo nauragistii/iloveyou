@@ -2,10 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Create floating hearts in the hero section
     createFloatingHearts();
 
-    // Initialize the message form
-    initMessageForm();
-
-    // Load sample messages
+    // Load sample messages - keep this to show existing messages
     loadSampleMessages();
 
     // Add scroll animations
@@ -72,93 +69,45 @@ function createFloatingHearts() {
     }
 }
 
-// Function to initialize the message form
-function initMessageForm() {
-    const form = document.getElementById('messageForm');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get form values
-        const name = document.getElementById('name').value;
-        const message = document.getElementById('message').value;
-
-        // Create and add the new message
-        addMessage(name, message);
-
-        // Reset form
-        form.reset();
-    });
-}
-
-// Function to add a message to the display
-function addMessage(name, message) {
-    const messagesDisplay = document.querySelector('.messages-display');
-
-    // Create message card
-    const messageCard = document.createElement('div');
-    messageCard.classList.add('message-card');
-
-    // Add content
-    messageCard.innerHTML = `
-        <h4>${name}</h4>
-        <p>${message}</p>
-        <small>${new Date().toLocaleDateString()}</small>
-    `;
-
-    // Add to display
-    messagesDisplay.prepend(messageCard);
-}
-
 // Function to load sample messages
 function loadSampleMessages() {
-    const sampleMessages = [{
-            name: "Neruda",
-            message: "Buah manggis beras ketan semoga langgeng sampe ke pelaminan.",
-            date: "4/6/2025"
-        },
-        {
-            name: "Shabie",
-            message: "happy mensive adek ku luca dan juga pacar nya yang imut yang manis yang gemes kayak kakak nya luca, be happy ya kalian, semoga kalian makin hari makin lengket kayak lem tembak apa lem sepatu? dua dua nya aja, makin di kelilingi sama kebahagiaan jugaa, apapun yang terjadi semoga kalian bisa lewatin itu yaa, doa terbaik buat adek adek ku dalam membina hubungan nyaa, kakak sayang kalian, semoga kalian selalu bahagia dan di lindungi sama tuhan, aminnn.",
-            date: "4/6/2025"
-        },
-        {
-            name: "Geraint",
-            message: "Happy mensive utk bestyku Dio & Lucaith, semoga sakinah mawadah warahmah a.k.a langgeng terus. Semoga semakin kapel gols di setiap harinya. Yeah, bahagia selalu best",
-            date: "4/6/2025"
-        },
-        {
-            name: "Joshe",
-            message: "You two are like that perfect mix of chaos and comfort — a little weird, a little sweet, but somehow just right. Watching you guys together feels like a rom-com that actually makes sense. Seriously, it’s rare to find someone who just gets you, and you both seem to have that. So keep holding onto each other, through the laughs, the small fights, the late-night talks, and all the random moments in between. Love like that? That’s something worth holding on to. Proud of you both, and lowkey obsessed with how cute you are together.",
-            date: "20/6/2025"
-        }
-    ];
+    const messagesDisplay = document.querySelector('.messages-display');
 
-    // Add sample messages with a delay
-    sampleMessages.forEach((msg, index) => {
-        setTimeout(() => {
-            addMessageWithCustomDate(msg.name, msg.message, msg.date);
-        }, index * 300);
-    });
+    if (messagesDisplay) {
+        // Clear any existing messages
+        messagesDisplay.innerHTML = '';
+
+        // Add sample messages with predefined dates
+        addMessageWithCustomDate('Shabie', 'happy mensive adek ku luca dan juga pacar nya yang imut yang manis yang gemes kayak kakak nya luca, be happy ya kalian, semoga kalian makin hari makin lengket kayak lem tembak apa lem sepatu? dua dua nya aja, makin di kelilingi sama kebahagiaan jugaa, apapun yang terjadi semoga kalian bisa lewatin itu yaa, doa terbaik buat adek adek ku dalam membina hubungan nyaa, kakak sayang kalian, semoga kalian selalu bahagia dan di lindungi sama tuhan, aminnn.', 'June 4, 2025');
+
+        addMessageWithCustomDate('Geraint', 'Happy mensive utk bestyku Dio & Lucaith, semoga sakinah mawadah warahmah a.k.a langgeng terus. Semoga semakin kapel gols di setiap harinya. Yeah, bahagia selalu best', 'June 4, 2025');
+
+        addMessageWithCustomDate('Neruda', 'Buah manggis beras ketan semoga langgeng sampe ke pelaminan', 'June 4, 2025');
+
+        addMessageWithCustomDate('Joshe', 'You two are like that perfect mix of chaos and comfort — a little weird, a little sweet, but somehow just right. Watching you guys together feels like a rom-com that actually makes sense. Seriously, it’s rare to find someone who just gets you, and you both seem to have that. So keep holding onto each other, through the laughs, the small fights, the late-night talks, and all the random moments in between. Love like that? That’s something worth holding on to. Proud of you both, and lowkey obsessed with how cute you are together.', 'June 4, 2025');
+    }
 }
 
 // Function to add message with custom date
 function addMessageWithCustomDate(name, message, date) {
     const messagesDisplay = document.querySelector('.messages-display');
 
-    // Create message card
-    const messageCard = document.createElement('div');
-    messageCard.classList.add('message-card');
+    if (messagesDisplay) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message');
 
-    // Add content with custom date
-    messageCard.innerHTML = `
-        <h4>${name}</h4>
-        <p>${message}</p>
-        <small>${date}</small>
-    `;
+        messageElement.innerHTML = `
+            <div class="message-header">
+                <span class="message-name">${name}</span>
+                <span class="message-date">${date}</span>
+            </div>
+            <div class="message-content">
+                <p>${message}</p>
+            </div>
+        `;
 
-    // Add to display
-    messagesDisplay.prepend(messageCard);
+        messagesDisplay.appendChild(messageElement);
+    }
 }
 
 // Function to initialize scroll animations
